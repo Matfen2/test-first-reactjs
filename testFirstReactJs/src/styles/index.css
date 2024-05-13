@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("/src/assets/ReactJsBackground.png");
+}
+
+header {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header h3 {
+  color: azure;
+}
+header .navbar .navbar-nav {
+  -moz-column-gap: 120px;
+       column-gap: 120px;
+}
+header .navbar .navbar-nav .nav-item .nav-link {
+  color: azure;
+  cursor: pointer;
+  transition: all 0.2ms ease;
+}
+header .navbar .navbar-nav .nav-item .nav-link:hover {
+  font-weight: bold;
+  transform: scale(1.1);
+}
+
+.list {
+  margin: 60px auto;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.list .col-lg-4 .card {
+  text-align: center;
+  border: none;
+  background: transparent;
+}
+.list .col-lg-4 .card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+.list .col-lg-4 .card .card-body .img-fluid {
+  height: 430px;
+  max-width: 390px;
+  margin: auto;
+}
+.list .col-lg-4 .card .card-body #btnLearn {
+  margin: 15px auto;
+  border: 1px solid black;
+  background-color: azure;
+}
+
+.describe {
+  text-align: center;
+}
+.describe p {
+  font-size: 1.4em;
+  color: azure;
+}
+
+footer {
+  left: 50%;
+  bottom: 0%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+footer .copy {
+  font-size: 1.4em;
+  color: azure;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: auto;
+  margin: auto;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('/src/assets/ReactJsBackground.png');
+}
+
+// MIXIN && ROOT
+@mixin flex ($flexDirection) {
+  display: flex;
+  flex-direction: $flexDirection;
+}
+
+$firstColor: azure;
+$secondColor: black;
+
+// HEADER
+header {
+  padding: 10px;
+  @include flex (row);
+  justify-content: space-between;
+  h3 {
+    color: $firstColor;
+  }
+  .navbar {
+    .navbar-nav {
+      column-gap: 120px;
+      .nav-item {
+        .nav-link {
+          color: $firstColor;
+          cursor: pointer;
+          transition: all 0.20ms ease;
+          &:hover {
+            font-weight: bold;
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+// CARD
+.list {
+  margin: 60px auto;
+  display: flex;
+  column-gap: 20px;
+  .col-lg-4 {
+    .card {
+      text-align: center;
+      border: none;
+      background: transparent;
+      .card-body {
+        @include flex (column);
+        .img-fluid {
+          height: 430px;
+          max-width: 390px;
+          margin: auto;
+        }
+        #btnLearn {
+          margin: 15px auto;
+          border: 1px solid $secondColor;
+          background-color: azure;
+        } 
+      }
+    }
+  }
+}
+
+// DESCRIBE
+.describe {
+  text-align: center;
+  p {
+    font-size: 1.4em;
+    color: $firstColor;
+  }
+}
+
+// FOOTER
+footer {
+  left: 50%;
+  bottom: 0%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  .copy {
+    font-size: 1.4em;
+    color: $firstColor;
+  }
+}
